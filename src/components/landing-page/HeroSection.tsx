@@ -73,7 +73,7 @@ export default function HeroSection() {
   }, [displayedText, isTyping, fullText])
 
   return (
-    <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+<section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-visible">
       {/* Animated Background */}
       <AnimatedBackground />
 
@@ -98,8 +98,8 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.2 }}
       ></motion.div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+{/* Content */}
+      <div className="relative z-10 container mx-auto px-4 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -201,11 +201,11 @@ export default function HeroSection() {
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-2xl opacity-50 animate-pulse"></div>
 
             {/* Image Container */}
-            <div id="ih57q" className="relative w-full h-full max-w-md">
+            <div id="ih57q" className="relative w-full h-full max-w-md max-h-[550px]">
               <div
                 id="iv8qi"
                 className="absolute inset-0 rounded-2xl border-2 border-primary/30 glow-border overflow-hidden"
-                style={{ height: '600px' }}
+                style={{ height: '550px' }}
               >
                 <img
                   id="iemqr"

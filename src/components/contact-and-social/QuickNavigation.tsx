@@ -26,7 +26,7 @@ export default function QuickNavigation() {
       color: 'from-blue-500/20 to-cyan-500/20',
     },
     {
-      title: 'Lihat Keahlian',
+      title: 'Lihat Skill',
       description: 'Pelajari teknologi yang saya kuasai',
       icon: 'Zap',
       href: './skills-and-services.html',

@@ -23,16 +23,16 @@ export const MAIN_NAVIGATION: INavigationLink[] = [
     iconName: "User",
   },
   {
-    id: "nav_skills",
-    label: "Keahlian",
-    url: "#skills_and_services",
-    iconName: "Gauge",
-  },
-  {
     id: "nav_portfolio",
     label: "Portofolio",
     url: "#portfolio_showcase",
     iconName: "Code",
+  },
+  {
+    id: "nav_skills",
+    label: "Skill",
+    url: "#skills_and_services",
+    iconName: "Gauge",
   },
   {
     id: "nav_contact",

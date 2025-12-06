@@ -38,7 +38,7 @@ export default function HeroSection() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text">
-          Keahlian & Layanan
+          Skill & Layanan
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground">
           Teknologi terkini dan layanan profesional untuk mewujudkan visi digital

@@ -25,7 +25,7 @@ export default function FuturisticHeader({ currentPage = 'landing_page' }: Futur
   const navLinks = [
     { name: 'Beranda', href: './landing-page.html', id: 'landing_page' },
     { name: 'Tentang', href: './about-me.html', id: 'about_me' },
-    { name: 'Keahlian', href: './skills-and-services.html', id: 'skills_and_services' },
+    { name: 'Skill', href: './skills-and-services.html', id: 'skills_and_services' },
     { name: 'Portofolio', href: './portfolio-showcase.html', id: 'portfolio_showcase' },
     { name: 'Kontak', href: './contact-and-social.html', id: 'contact_and_social' },
   ]
@@ -51,7 +51,7 @@ export default function FuturisticHeader({ currentPage = 'landing_page' }: Futur
               />
             </div>
             <span className="text-xl md:text-2xl font-bold gradient-text hidden sm:inline">
-              Luthfi A. Fahmi
+              ReonTech
             </span>
           </a>
 

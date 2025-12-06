@@ -50,7 +50,7 @@ export default function CTABenefits() {
     {
       icon: 'Rocket',
       title: 'Pengembangan Cepat',
-      description: 'Kami menggunakan teknologi terkini untuk memastikan proyek Anda selesai tepat waktu tanpa mengorbankan kualitas.',
+      description: 'saya menggunakan teknologi terkini untuk memastikan proyek Anda selesai tepat waktu tanpa mengorbankan kualitas.',
     },
     {
       icon: 'Shield',
@@ -65,7 +65,7 @@ export default function CTABenefits() {
     {
       icon: 'Zap',
       title: 'Performa Optimal',
-      description: 'Website dan aplikasi yang kami buat dioptimalkan untuk kecepatan, SEO, dan user experience terbaik.',
+      description: 'Website dan aplikasi yang saya buat dioptimalkan untuk kecepatan, SEO, dan user experience terbaik.',
     },
     {
       icon: 'Lock',
@@ -94,10 +94,10 @@ export default function CTABenefits() {
           variants={headerVariants}
         >
           <h2 className="text-3xl md:text-5xl font-bold">
-            <span className="gradient-text">Mengapa Memilih Luthfi?</span>
+            <span className="gradient-text">Mengapa Memilih Saya?</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Kami menawarkan lebih dari sekadar coding. Kami memberikan solusi komprehensif untuk kesuksesan digital Anda.
+            Saya menawarkan lebih dari sekadar coding. saya memberikan solusi komprehensif untuk kesuksesan digital Anda.
           </p>
         </motion.div>
 

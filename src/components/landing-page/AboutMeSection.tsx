@@ -118,7 +118,7 @@ export default function AboutMeSection() {
 
             {/* Main Skills Highlight */}
             <motion.div className="space-y-4" variants={itemVariants}>
-              <h3 className="text-xl font-semibold">Keahlian Utama</h3>
+              <h3 className="text-xl font-semibold">Skill Utama</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {topSkills.map((skill, index) => (
                   <motion.div

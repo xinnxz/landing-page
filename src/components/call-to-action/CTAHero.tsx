@@ -85,7 +85,7 @@ export default function CTAHero() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="gradient-text">Wujudkan Visi Digital Anda</span>
             <br />
-            <span className="text-foreground">Bersama Luthfi</span>
+            <span className="text-foreground">Bersama Saya</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">

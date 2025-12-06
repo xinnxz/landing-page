@@ -1,6 +1,6 @@
 
         
-/** Tipe data untuk item Keahlian Teknis */
+/** Tipe data untuk item Skill Teknis */
 export interface ISkillItem {
   id: string;
   name: string;
