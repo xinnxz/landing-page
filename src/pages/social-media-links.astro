@@ -1,0 +1,28 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import SocialMediaLinksHero from '@/components/social-media-links/SocialMediaLinksHero.tsx'
+import SocialMediaNavigation from '@/components/social-media-links/SocialMediaNavigation.tsx'
+---
+
+<BaseLayout title="Tautan Media Sosial - Luthfi Alfaridz Fahmi">
+  <div class="min-h-screen bg-background text-foreground flex flex-col">
+    {/* Animated Background */}
+    <AnimatedBackground client:load />
+    
+    {/* Header */}
+    <FuturisticHeader client:load currentPage="social_media_links" />
+    
+    {/* Main Content */}
+    <main class="flex-1 relative z-10 pt-20 md:pt-24">
+      <SocialMediaLinksHero client:idle />
+      <SocialMediaNavigation client:idle />
+    </main>
+    
+    {/* Footer */}
+    <FuturisticFooter />
+  </div>
+</BaseLayout>

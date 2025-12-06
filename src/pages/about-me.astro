@@ -1,0 +1,47 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import AboutHero from '@/components/about-me/AboutHero.tsx'
+import AboutBio from '@/components/about-me/AboutBio.tsx'
+import WorkPhilosophy from '@/components/about-me/WorkPhilosophy.tsx'
+import ExperienceTimeline from '@/components/about-me/ExperienceTimeline.tsx'
+import TechStack from '@/components/about-me/TechStack.tsx'
+import AboutCTA from '@/components/about-me/AboutCTA.tsx'
+---
+
+<BaseLayout title="Tentang Luthfi Alfaridz Fahmi - Freelance Programmer">
+  <div class="relative min-h-screen bg-background text-foreground overflow-hidden">
+    {/* Animated Background */}
+    <AnimatedBackground client:load />
+    
+    {/* Header */}
+    <FuturisticHeader client:load currentPage="about_me" />
+    
+    {/* Main Content */}
+    <main class="relative z-10 pt-20 md:pt-24">
+      {/* Hero Section */}
+      <AboutHero client:load />
+      
+      {/* Bio Section */}
+      <AboutBio client:load />
+      
+      {/* Work Philosophy */}
+      <WorkPhilosophy client:load />
+      
+      {/* Experience Timeline */}
+      <ExperienceTimeline client:load />
+      
+      {/* Tech Stack */}
+      <TechStack client:load />
+      
+      {/* CTA Section */}
+      <AboutCTA client:load />
+    </main>
+    
+    {/* Footer */}
+    <FuturisticFooter client:idle variant="simple" />
+  </div>
+</BaseLayout>

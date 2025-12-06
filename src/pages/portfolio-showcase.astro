@@ -1,0 +1,26 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import PortfolioShowcase from '@/components/portfolio-showcase/PortfolioShowcase.tsx'
+---
+
+<BaseLayout title="Portofolio - Luthfi Alfaridz Fahmi">
+  <div class="relative min-h-screen bg-background text-foreground overflow-hidden">
+    {/* Animated Background */}
+    <AnimatedBackground client:load />
+    
+    {/* Header */}
+    <FuturisticHeader client:load currentPage="portfolio_showcase" />
+    
+    {/* Main Content */}
+    <main class="relative z-10 pt-24 md:pt-28 pb-16">
+      <PortfolioShowcase client:idle />
+    </main>
+    
+    {/* Footer */}
+    <FuturisticFooter client:idle variant="simple" />
+  </div>
+</BaseLayout>

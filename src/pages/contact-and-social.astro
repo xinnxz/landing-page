@@ -1,0 +1,39 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import ContactHero from '@/components/contact-and-social/ContactHero.tsx'
+import SocialMediaGrid from '@/components/contact-and-social/SocialMediaGrid.tsx'
+import ContactMethods from '@/components/contact-and-social/ContactMethods.tsx'
+import QuickNavigation from '@/components/contact-and-social/QuickNavigation.tsx'
+---
+
+<BaseLayout title="Kontak & Sosial Media - Luthfi Alfaridz Fahmi">
+  <div class="relative min-h-screen bg-background text-foreground overflow-hidden">
+    {/* Animated Background */}
+    <AnimatedBackground client:load />
+    
+    {/* Header */}
+    <FuturisticHeader client:load currentPage="contact_and_social" />
+    
+    {/* Main Content */}
+    <main class="relative z-10 pt-24 md:pt-32 pb-16">
+      {/* Hero Section */}
+      <ContactHero client:idle />
+      
+      {/* Social Media Grid */}
+      <SocialMediaGrid client:idle />
+      
+      {/* Contact Methods */}
+      <ContactMethods client:idle />
+      
+      {/* Quick Navigation */}
+      <QuickNavigation client:idle />
+    </main>
+    
+    {/* Footer */}
+    <FuturisticFooter client:load variant="extended" />
+  </div>
+</BaseLayout>

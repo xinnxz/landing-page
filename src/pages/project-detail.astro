@@ -1,0 +1,36 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import ProjectHero from '@/components/project-detail/ProjectHero.tsx'
+import ProjectOverview from '@/components/project-detail/ProjectOverview.tsx'
+import TechStack from '@/components/project-detail/TechStack.tsx'
+import ProjectGallery from '@/components/project-detail/ProjectGallery.tsx'
+import ProjectLinks from '@/components/project-detail/ProjectLinks.tsx'
+import RelatedProjects from '@/components/project-detail/RelatedProjects.tsx'
+import CTASection from '@/components/project-detail/CTASection.tsx'
+---
+
+<BaseLayout title="Detail Proyek - Luthfi Alfaridz Fahmi">
+  <div class="relative min-h-screen bg-background text-foreground overflow-hidden">
+    <AnimatedBackground client:load />
+    
+    <div class="relative z-10">
+      <FuturisticHeader client:load currentPage="portfolio_showcase" />
+      
+      <main class="pt-20 md:pt-24">
+        <ProjectHero client:idle />
+        <ProjectOverview client:idle />
+        <TechStack client:idle />
+        <ProjectGallery client:idle />
+        <ProjectLinks client:idle />
+        <RelatedProjects client:idle />
+        <CTASection client:idle />
+      </main>
+      
+      <FuturisticFooter client:idle variant="simple" />
+    </div>
+  </div>
+</BaseLayout>

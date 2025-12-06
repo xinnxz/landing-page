@@ -1,0 +1,30 @@
+import { jsxs, jsx } from "react/jsx-runtime";
+import { B as Button, c as cn } from "./AnimatedBackground.Da9MObfw.js";
+import "class-variance-authority";
+import { forwardRef } from "react";
+const GlowButton = forwardRef(({
+  className,
+  variant = "primary",
+  glowIntensity = "medium",
+  children,
+  ...props
+}, ref) => {
+  const glowClasses = {
+    low: "hover:shadow-[0_0_10px_rgba(34,211,238,0.3)]",
+    medium: "hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]",
+    high: "hover:shadow-[0_0_30px_rgba(34,211,238,0.7)]"
+  };
+  const variantClasses = {
+    primary: "bg-primary text-primary-foreground hover:bg-primary/90 border-primary/50",
+    secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90 border-secondary/50",
+    outline: "bg-transparent text-primary border-primary hover:bg-primary/10"
+  };
+  return /* @__PURE__ */ jsxs(Button, { ref, className: cn("relative overflow-hidden border transition-all duration-300 hover:scale-105", variantClasses[variant], glowClasses[glowIntensity], className), ...props, "data-source-file": "E:\\\\Downloads\\\\Landing Page-2025.12.6 042312\\\\code\\\\src\\\\components\\\\common\\\\GlowButton.tsx", "data-source-line-start": "28", "data-source-line-end": "40", children: [
+    /* @__PURE__ */ jsx("span", { className: "relative z-10 flex items-center", "data-source-file": "E:\\\\Downloads\\\\Landing Page-2025.12.6 042312\\\\code\\\\src\\\\components\\\\common\\\\GlowButton.tsx", "data-source-line-start": "38", "data-source-line-end": "38", children }),
+    /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000", "data-source-file": "E:\\\\Downloads\\\\Landing Page-2025.12.6 042312\\\\code\\\\src\\\\components\\\\common\\\\GlowButton.tsx", "data-source-line-start": "39", "data-source-line-end": "39" })
+  ] });
+});
+GlowButton.displayName = "GlowButton";
+export {
+  GlowButton as G
+};

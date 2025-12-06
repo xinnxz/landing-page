@@ -1,0 +1,27 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import HeroSection from '@/components/landing-page/HeroSection.tsx'
+import AboutMeSection from '@/components/landing-page/AboutMeSection.tsx'
+import FeaturedServices from '@/components/landing-page/FeaturedServices.tsx'
+import TechStack from '@/components/landing-page/TechStack.tsx'
+import AnimatedStats from '@/components/landing-page/AnimatedStats.tsx'
+---
+
+<BaseLayout title="Luthfi Alfaridz Fahmi - Freelance Programmer">
+  <div class="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
+    <FuturisticHeader client:load currentPage="landing_page" />
+    
+<main class="flex-1 pt-20">
+      <HeroSection client:load />
+      <AboutMeSection client:idle />
+      <AnimatedStats client:idle />
+      <FeaturedServices client:idle />
+      <TechStack client:idle />
+    </main>
+
+    <FuturisticFooter client:idle variant="extended" />
+  </div>
+</BaseLayout>

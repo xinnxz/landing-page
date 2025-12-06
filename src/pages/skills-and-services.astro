@@ -1,0 +1,39 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import HeroSection from '@/components/skills-and-services/HeroSection.tsx'
+import SkillsGrid from '@/components/skills-and-services/SkillsGrid.tsx'
+import ServicesSection from '@/components/skills-and-services/ServicesSection.tsx'
+import CertificatesSection from '@/components/skills-and-services/CertificatesSection.tsx'
+import CTASection from '@/components/skills-and-services/CTASection.tsx'
+---
+
+<BaseLayout title="Keahlian & Layanan - Luthfi Alfaridz Fahmi">
+  <div class="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
+    <AnimatedBackground client:load />
+    
+    <FuturisticHeader client:load currentPage="skills_and_services" />
+    
+<main class="flex-1 pt-20">
+      {/* Hero Section */}
+      <HeroSection client:load />
+
+      {/* Skills Grid */}
+      <SkillsGrid client:idle />
+
+      {/* Certificates Section */}
+      <CertificatesSection client:idle />
+
+      {/* Services Section */}
+      <ServicesSection client:idle />
+
+      {/* CTA Section */}
+      <CTASection client:idle />
+    </main>
+
+    {/* Footer */}
+    <FuturisticFooter />
+  </div>
+</BaseLayout>

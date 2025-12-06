@@ -1,0 +1,22 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import ContactFormContent from '@/components/contact-form/ContactFormContent.tsx'
+---
+
+<BaseLayout title="Formulir Kontak - Luthfi Alfaridz Fahmi">
+  <div class="min-h-screen flex flex-col bg-background text-foreground">
+    <AnimatedBackground client:load />
+    
+    <FuturisticHeader client:load currentPage="contact_form" />
+    
+    <main class="flex-1 relative z-10 pt-20 md:pt-24 pb-12">
+      <ContactFormContent client:load />
+    </main>
+    
+    <FuturisticFooter client:idle variant="simple" />
+  </div>
+</BaseLayout>

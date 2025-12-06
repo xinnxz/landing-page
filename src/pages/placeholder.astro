@@ -1,0 +1,31 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+---
+
+<BaseLayout title="Dalam Pembangunan">
+  <div class="min-h-screen flex items-center justify-center bg-background">
+    <div class="text-center space-y-6 p-8">
+      <div class="relative">
+        <div class="absolute inset-0 blur-3xl bg-primary/20 rounded-full"></div>
+        <h1 class="relative text-6xl md:text-8xl font-bold gradient-text">
+          Segera Hadir
+        </h1>
+      </div>
+      <p class="text-xl md:text-2xl text-muted-foreground max-w-md mx-auto">
+        Halaman ini sedang dalam pembangunan. Kami akan segera kembali dengan sesuatu yang luar biasa.
+      </p>
+      <div class="flex justify-center gap-2 pt-4">
+        <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+        <div class="w-3 h-3 bg-primary rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+        <div class="w-3 h-3 bg-primary rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+      </div>
+      <a 
+        href="./landing-page.html" 
+        class="inline-block mt-8 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:scale-105 transition-transform glow-border"
+      >
+        Kembali ke Beranda
+      </a>
+    </div>
+  </div>
+</BaseLayout>

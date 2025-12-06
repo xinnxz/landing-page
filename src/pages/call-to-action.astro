@@ -1,0 +1,42 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import FuturisticHeader from '@/components/common/FuturisticHeader.tsx'
+import AnimatedBackground from '@/components/common/AnimatedBackground.tsx'
+import FuturisticFooter from '@/components/common/FuturisticFooter.tsx'
+import CTAHero from '@/components/call-to-action/CTAHero.tsx'
+import CTABenefits from '@/components/call-to-action/CTABenefits.tsx'
+import CTAProcess from '@/components/call-to-action/CTAProcess.tsx'
+import CTAFinal from '@/components/call-to-action/CTAFinal.tsx'
+---
+
+<BaseLayout title="Mulai Proyek Anda - Luthfi Alfaridz Fahmi">
+  <div class="relative min-h-screen bg-background text-foreground overflow-hidden">
+    {/* Animated Background */}
+    <AnimatedBackground client:load />
+    
+    {/* Grid Pattern Background */}
+    <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
+    
+    {/* Header */}
+    <FuturisticHeader client:load currentPage="call_to_action" />
+    
+    {/* Main Content */}
+    <main class="relative z-10 pt-20 md:pt-24">
+      {/* Hero Section */}
+      <CTAHero client:load />
+      
+      {/* Benefits Section */}
+      <CTABenefits client:idle />
+      
+      {/* Process Section */}
+      <CTAProcess client:idle />
+      
+      {/* Final CTA Section */}
+      <CTAFinal client:idle />
+    </main>
+    
+    {/* Footer */}
+    <FuturisticFooter client:idle variant="simple" />
+  </div>
+</BaseLayout>
