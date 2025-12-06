@@ -228,8 +228,8 @@ export default function HeroSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  <p className="text-sm font-semibold text-primary">Full-Stack Developer</p>
-                  <p className="text-xs text-muted-foreground">React • Node.js • TypeScript</p>
+                  <p className="text-sm font-semibold text-primary">Luthfi Alfaridz Fahmi</p>
+                  <p className="text-xs text-muted-foreground">CEO & Founder ReonTech</p>
                 </motion.div>
               </div>
 
