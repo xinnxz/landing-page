@@ -93,7 +93,7 @@ const particleCount = 100
           const dx = mouseX - particle.x
           const dy = mouseY - particle.y
 const distance = Math.sqrt(dx * dx + dy * dy)
-            const attractionRadius = 200
+            const attractionRadius = 150
  
            if (distance < attractionRadius) {
             // Calculate attraction force
