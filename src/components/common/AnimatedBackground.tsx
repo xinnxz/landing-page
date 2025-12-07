@@ -48,7 +48,7 @@ export default function AnimatedBackground() {
       originalVy: number
     }> = []
 
-const particleCount = 120
+const particleCount = 100
     for (let i = 0; i < particleCount; i++) {
       const vx = (Math.random() - 0.5) * 0.5
       const vy = (Math.random() - 0.5) * 0.5
@@ -92,12 +92,12 @@ const particleCount = 120
           // Calculate distance to mouse
           const dx = mouseX - particle.x
           const dy = mouseY - particle.y
-          const distance = Math.sqrt(dx * dx + dy * dy)
-          const attractionRadius = 150
+const distance = Math.sqrt(dx * dx + dy * dy)
+            const attractionRadius = 200
  
            if (distance < attractionRadius) {
             // Calculate attraction force
-            const strength = (1 - distance / attractionRadius) * 0.15
+            const strength = (1 - distance / attractionRadius) * 0.2
             const angle = Math.atan2(dy, dx)
 
             // Apply attraction - particle follows mouse
@@ -118,11 +118,21 @@ const particleCount = 120
           particle.vy += (particle.originalVy - particle.vy) * 0.02
         }
 
-        particle.x += particle.vx
+particle.x += particle.vx
         particle.y += particle.vy
 
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1
+// Wrap particles around viewport boundaries for continuous direction change
+         if (particle.x + particle.size < 0) {
+           particle.x = canvas.width + particle.size
+         } else if (particle.x - particle.size > canvas.width) {
+           particle.x = -particle.size
+         }
+
+         if (particle.y + particle.size < 0) {
+           particle.y = canvas.height + particle.size
+         } else if (particle.y - particle.size > canvas.height) {
+           particle.y = -particle.size
+         }
 
         ctx.fillStyle = 'rgba(34, 211, 238, 0.6)'
         ctx.beginPath()
